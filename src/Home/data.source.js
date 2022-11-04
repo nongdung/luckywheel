@@ -298,9 +298,7 @@ export const Footer00DataSource = {
     className: 'copyright',
     children: (
       <span>
-        ©2022&nbsp;<a href="#">WShop</a>&nbsp;All Rights Reserved<br />
-        <a href="./terms.html">Terms of Services</a> | <a href="./privacy.html">Privacy</a>
-        <br />
+        ©2022&nbsp;<a href="https://ClickFreeGifts.com">ClickFreeGifts.com</a>&nbsp;All Rights Reserved | <a href="./terms.html">Terms of Services</a> | <a href="./privacy.html">Privacy</a><br />
       </span>
     ),
   },
