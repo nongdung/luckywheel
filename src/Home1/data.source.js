@@ -44,7 +44,6 @@ export const Banner30DataSource = {
         className: 'banner3-name',
         children: (
           <span>
-            <p>Lucky Wheel</p>
           </span>
         ),
       },

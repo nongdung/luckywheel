@@ -9,13 +9,14 @@ const WheelComponent = ({
   contrastColor = 'white',
   buttonText = 'Spin',
   isOnlyOnce = true,
-  size = 290,
+  size = 195,
   upDuration = 100,
   downDuration = 1000,
-  fontFamily = 'proxima-nova'
+  fontFamily = 'proxima-nova',
+  width = 600,
 }) => {
   let currentSegment = ''
-  let isStarted = false
+  let isStarted = false;
   const [isFinished, setFinished] = useState(false)
   let timerHandle = 0
   const timerDelay = segments.length
@@ -27,8 +28,9 @@ const WheelComponent = ({
   const downTime = segments.length * downDuration
   let spinStart = 0
   let frames = 0
-  const centerX = 300
-  const centerY = 300
+  // console.log('width', width);
+  const centerX = width > 600 ? 300 : width/2;
+  const centerY = width > 600 ? 300 : width/2;
   useEffect(() => {
     wheelInit()
     setTimeout(() => {
@@ -197,8 +199,9 @@ const WheelComponent = ({
     ctx.fillStyle = primaryColor
     ctx.font = 'bold 1.5em ' + fontFamily
     currentSegment = segments[i]
-    isStarted && ctx.fillText(currentSegment, centerX + 10, centerY + size + 50)
+    // isStarted && ctx.fillText(currentSegment, centerX + 10, centerY + size + 50)
   }
+  const wheelWidth = width > 600 ? 600 : width;
   const clear = () => {
     const ctx = canvasContext
     ctx.clearRect(0, 0, 1000, 800)
@@ -207,8 +210,8 @@ const WheelComponent = ({
     <div id='wheel'>
       <canvas
         id='canvas'
-        width='600'
-        height='600'
+        width={wheelWidth}
+        height={wheelWidth}
         style={{
           pointerEvents: isFinished && isOnlyOnce ? 'none' : 'auto'
         }}

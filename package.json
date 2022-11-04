@@ -2,11 +2,13 @@
   "name": "landing-create-react-app-example",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./",
+  "homepage": "./km/",
   "dependencies": {
     "@ant-design/compatible": "^1.0.2",
+    "@react-oauth/google": "^0.2.8",
     "antd": "^4.0.1",
     "enquire-js": "^0.2.1",
+    "jwt-decode": "^3.1.2",
     "rc-banner-anim": "^2.2.2",
     "rc-queue-anim": "^1.6.12",
     "rc-scroll-anim": "^2.5.6",
@@ -15,7 +17,8 @@
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-scripts": "2.1.5",
-    "react-wheel-of-prizes": "^1.0.9"
+    "react-wheel-of-prizes": "^1.0.9",
+    "styled-components": "^5.3.6"
   },
   "scripts": {
     "start": "react-app-rewired start",

@@ -1,13 +1,10 @@
 import React from 'react';
+import { Button } from 'antd';
 import QueueAnim from 'rc-queue-anim';
 import Texty from 'rc-texty';
 import 'rc-texty/assets/index.css';
-import { Button } from 'antd';
 
-import LuckyWheel from '../LuckyWheel';
-
-class Banner extends React.Component {
-
+class Banner extends React.PureComponent {
   render() {
     const { ...currentProps } = this.props;
     const { dataSource } = currentProps;
@@ -33,13 +30,6 @@ class Banner extends React.Component {
         </div>
       );
     });
-
-    children.push(
-      <div id="wheel" key="wheel">
-        <LuckyWheel />
-      </div>
-    );
-
     return (
       <div {...currentProps} {...dataSource.wrapper}>
         <QueueAnim
