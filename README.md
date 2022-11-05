@@ -4,3 +4,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Quick start
+```
+git clone https://github.com/nongdung/luckywheel.git
+cd luckywheel
+yarn install
+yarn start
+```
+
+## Build
+```
+yarn build
+```
